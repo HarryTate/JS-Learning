@@ -93,3 +93,22 @@ function addFiveToNumber(){
   input += 5;
   document.getElementById("addFiveResult").innerHTML = input;
 }
+
+function switchCase(animal){
+  switch(animal){
+    case "cat":
+      return "meow";
+    break;
+    case "dog":
+      return "woof";
+    break;
+    case "tiger":
+      return "rawr!!!";
+    break;
+    default:
+      return "no Sound";
+  }
+}
+function activateSwitchCase(){
+  document.getElementById("switchCase").innerHTML = switchCase("cat");
+}
