@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  font-family: Arial, sans-serif;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container{
+  width:80%;
+  margin:0 auto;
+}
+
+.col-4{
+  width:22.5%;
+  float:left;
+  margin:10px;
+}
+.btn{
+  padding:20px;
+  background-color: #efeded;
+  margin-top: 1em;
+  min-height:100px;
+}
+
+.active{
+  color:blue;
+}
+
+@media(max-width:1020px){
+.col-4{
+  width:40%;
+}
+}
+@media(max-width:500px){
+.col-4{
+  width:100%;
+}
+}

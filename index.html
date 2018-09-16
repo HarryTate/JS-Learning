@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title></title>
+  </head>
+  <body>
+    <header>
+
+    </header>
+    <section class="container">
+      <div class="row">
+        <div class="col-4">
+        <div class="btn" id="btn-increment" onclick="increaseNumber()">
+          Increasing Number onClick
+        </div>
+      </div>
+        <div class="col-4">
+        <div class="btn" id="date" onclick="getDate()">
+          Display Current Date
+        </div>
+      </div>
+      <div class="col-4" >
+        <div id="word" class="btn" onclick="changeWord()">
+            Click here to change word
+        </div>
+      </div>
+        <div class="col-4" >
+          <div id="randomNumber" class="btn" onclick="randomNumber()">
+            Click here to generate random number
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4" >
+          <div id="randomWord" class="btn" onclick="generateWord()">
+            Click here to generate random word
+          </div>
+        </div>
+
+        <div class="col-4" >
+          <div id="numberMatch" class="btn" onclick="matchNumber()">
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div id="" class="btn">
+            <button onClick="chooseNumber('choice1')">Choice1</button>
+            <button onClick="chooseNumber('choice2')">Choice2</button>
+            <div id="printChoice"></div>
+          </div>
+        </div>
+        <div class="col-4" >
+          <div id="numberGreaterOrLessThan" class="btn" onclick="activateNumCheck()">
+            Number less than, equal too or greater than 10?
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div id="numberBetweenTwoValues" class="btn" onclick="activateNumberBetween()">
+            Number Between Two Values?
+          </div>
+        </div>
+        <div class="col-4">
+          <div id="whatIsSizeOfNumber" class="btn" onclick="activateWhatIsSizeOfNumber()">
+            Size of the number
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="btn">
+            <span>Relay input back to user</span>
+            <form id="form" onsubmit="return false;">
+              <input  type="text" id="userInput" />
+              <input type="submit" onclick="takeInput();" />
+            </form>
+            <div id="output"> Output Here</div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="btn">
+            <span>Add 5 to My Number</span>
+            <form id="form" onsubmit="return false;">
+              <input  type="text" id="addFive" />
+              <input type="submit" onclick="addFiveToNumber()" />
+            </form>
+            <div id="addFiveResult"> Output Here</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>
