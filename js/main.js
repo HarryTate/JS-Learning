@@ -117,3 +117,25 @@ function switchCase(animal){
 function activateSwitchCase(){
   document.getElementById("switchCase").innerHTML = switchCase("cat");
 }
+
+function accessObjectDotNotation(){
+  var cat = {
+    legs: 4,
+    gender: 'male',
+    tail: 1,
+    age: 7
+  };
+  var tail = cat.legs;
+   document.getElementById("objectDot").innerHTML = tail;
+}
+
+function accessObjectBracketNotation(){
+  var dog = {
+    'legs': 6,
+    'gender': 'Female',
+    'tail': 2,
+    'age': 12
+  };
+  var age = dog['age'];
+  document.getElementById('objectBracket').innerHTML = age;
+}
