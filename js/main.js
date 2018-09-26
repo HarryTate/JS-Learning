@@ -151,28 +151,28 @@ function updateObjectProperty(){
   document.getElementById('updateObject').innerHTML = object;
 }
 
+var myAnimals = {
+  'cat': 1,
+  'dog': 4,
+  'giraffe': 5,
+  'mice': 2,
+  'chickens': 4,
+  'hamster': 6,
+  'octopus': 2
+};
+
 function addObjectProperty(){
-  var myAnimals = {
-    'cat': 1,
-    'dog': 4,
-    'giraffe': 5,
-    'mice': 2,
-    'chickens': 4
-  };
   myAnimals['lion'] = 4;
   var object = myAnimals['lion'];
   document.getElementById('addObjectProperty').innerHTML = object;
 }
 
-var myAnimals = {
-  'dog': 2,
-  'cat': 1,
-  'hamster': 6,
-  'octopus': 2
-};
-
 function deleteObjectProperty(){
   delete myAnimals.dog;
   var dog = myAnimals.dog;
   document.getElementById('deleteObjectProperty').innerHTML = dog;
+}
+
+function objectLookUp(){
+
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Black Jack Game</title>
+    <link rel="stylesheet" href="css/blackjack.css">
+</head>
+
+<body>
+    <header>
+        <h1>BlackJack Game</h1>
+    </header>
+    <div class="container">
+        <div id="inGame">
+            <span>Pick a card</span>
+            <button id="cardDeck" class="deck" onClick="pickACard()">Pick Card</button>
+            <div id="hand">
+                <div>Cards in hand: <span id="playerHand"></span></div>
+                <div>Total: <span id="playerHandTotal"></span> </div>
+            </div>
+        </div>
+        <div id="gameLost">
+            <h1>You Lost</h1>
+            <div> Cards in hand <span id="losingCards"></span></div>
+            <div> Your Score <span id="losingScore"></span></div>
+            <button onclick="restartGame()">Restart Game</button>
+        </div>
+    </div>
+    <script src="js/blackjack.js" charset="utf-8"></script>
+</body>
+
+</html>
