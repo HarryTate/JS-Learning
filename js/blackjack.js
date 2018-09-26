@@ -14,7 +14,7 @@ function pickACard() {
         playerLose();
     } else {
         console.log(cardsInPlayersHand);
-        document.getElementById("playerHandTotal").innerHTML = playerCard;
+        document.getElementById("playerHandTotal").innerHTML = total;
         document.getElementById("playerHand").innerHTML = cardsInPlayersHand;
     }
 }
