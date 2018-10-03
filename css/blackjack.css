@@ -27,5 +27,11 @@ button{
   display: none;
 }
 #gameLost{
-  display:none;
+  display: none;
+}
+#gameDraw{
+  display: none;
+}
+#gameWin{
+  display: none;
 }
