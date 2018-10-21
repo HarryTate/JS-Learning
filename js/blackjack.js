@@ -10,7 +10,7 @@ function pickACard() {
     var playerCard = Math.floor((Math.random() * 13) + 1);
     cardsInPlayersHand.push(playerCard);
     total = playerCard + total;
-    if (total > 13) {
+    if (total > 21) {
         playerLose();
     } else {
         console.log(cardsInPlayersHand);
