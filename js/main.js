@@ -172,7 +172,32 @@ function deleteObjectProperty(){
   var dog = myAnimals.dog;
   document.getElementById('deleteObjectProperty').innerHTML = dog;
 }
+//While Loop
+function whileLoop(){
+var anArray = [];
+var i = 0;
+while(i < 5){
+anArray.push(i);
+i++;
+}
+document.getElementById('whileLoop').innerHTML = anArray;
+}
 
-function objectLookUp(){
+function forLoop(){
+var anArray = [];
+for(var i = 0; i < 10; i++){
+anArray.push(i);
+}
+anArray.reverse();
+document.getElementById('forLoop').innerHTML = anArray;
+}
 
+//iterates through an array length
+function iterateThroughArray(){
+  var array = [1,'car',5,'bike',9];
+  total = 0;
+  for(var i = 0; i < array.length; i++){
+    total += array[i];
+}
+document.getElementById('arrayValuesIterate').innerHTML = array;
 }
