@@ -3,30 +3,34 @@ var total = 0;
 var opponentScore = 0;
 
 function pickACard() {
-    var displayHand = document.getElementById("hand");
-    displayHand.style.display = "block";
-    var playerCard = Math.floor((Math.random() * 13) + 1);
-    cardsInPlayersHand.push(playerCard);
-    total = playerCard + total;
 
-     if (total > 21) {
-        playerLose();
-    } else {
-        document.getElementById("playerHandTotal").innerHTML = total;
-        document.getElementById("playerHand").innerHTML = cardsInPlayersHand;
-        document.getElementById("oppScore").innerHTML = opponentScore;
-    }
+  var displayHand = document.getElementById("hand");
+  displayHand.style.display = "block";
+  var playerCard = Math.floor((Math.random() * 13) + 1);
+  cardsInPlayersHand.push(playerCard);
+  total = playerCard + total;
+  if (total > 21) {
+    playerLose();
+  } else {
+    console.log(cardsInPlayersHand);
+    document.getElementById("playerHandTotal").innerHTML = total;
+    document.getElementById("playerHand").innerHTML = cardsInPlayersHand;
+  }
 }
 
 function playerLose() {
-    document.getElementById("losingCards").innerHTML = cardsInPlayersHand ;
-    document.getElementById("losingScore").innerHTML = total;
-    var displayHand = document.getElementById("hand");
-    displayHand.style.display = "none";
-    var inGame = document.getElementById("inGame");
-    inGame.style.display = "none";
-    var gameLost = document.getElementById("gameLost");
-    gameLost.style.display = "block";
+  console.log("your total was" + total);
+  document.getElementById("losingCards").innerHTML = cardsInPlayersHand ;
+  document.getElementById("losingScore").innerHTML = total;
+  total = 0;
+  cardsInPlayersHand = [];
+  var displayHand = document.getElementById("hand");
+  displayHand.style.display = "none";
+  var inGame = document.getElementById("inGame");
+  inGame.style.display = "none";
+  var gameLost = document.getElementById("gameLost");
+  gameLost.style.display = "block";
+
 }
 function playerDraw(){
     var displayHand = document.getElementById("hand");

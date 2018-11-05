@@ -12,8 +12,8 @@ function getDate(){
 }
 // Block 3
 function changeWord(){
-   var word = "new word";
-   document.getElementById("word").innerHTML = word;
+  var word = "new word";
+  document.getElementById("word").innerHTML = word;
 }
 // Block 4
 function randomNumber(){
@@ -28,11 +28,11 @@ function generateWord(){
 }
 // Block 6
 function matchNumber(numberToBeMatched){
-   if(numberToBeMatched == 2){
-     return  "yes";
-   } else {
-     return "Not Equal";
-   }
+  if(numberToBeMatched == 2){
+    return  "yes";
+  } else {
+    return "Not Equal";
+  }
 }
 function activateMatchNumber(){
   numberToBeMatched = 2;
@@ -40,16 +40,16 @@ function activateMatchNumber(){
 }
 // Block 7
 function chooseNumber(choice){
-   var user;
-   user = choice;
-   document.getElementById("printChoice").innerHTML = user ;
+  var user;
+  user = choice;
+  document.getElementById("printChoice").innerHTML = user ;
 }
 // Block 8
 function greaterThanTen(num){
   if(num > 10){
     return "Number is greater than 10";
   } else if (num < 10){
-      return "Number is less than 10";
+    return "Number is less than 10";
   } else{
     return "Number is ten";
   }
@@ -88,8 +88,8 @@ function activateWhatIsSizeOfNumber(){
 // Block 11
 function takeInput(){
   var input = document.getElementById("userInput").value;
-    document.getElementById("output").innerHTML = input;
-  }
+  document.getElementById("output").innerHTML = input;
+}
 // Block 12
 function addFiveToNumber(){
   var input = document.getElementById("addFive").value;
@@ -101,16 +101,16 @@ function addFiveToNumber(){
 function switchCase(animal){
   switch(animal){
     case "cat":
-      return "meow";
+    return "meow";
     break;
     case "dog":
-      return "woof";
+    return "woof";
     break;
     case "tiger":
-      return "rawr!!!";
+    return "rawr!!!";
     break;
     default:
-      return "no Sound";
+    return "no Sound";
   }
 
 }
@@ -126,7 +126,7 @@ function accessObjectDotNotation(){
     age: 7
   };
   var tail = cat.legs;
-   document.getElementById("objectDot").innerHTML = tail;
+  document.getElementById("objectDot").innerHTML = tail;
 }
 
 function accessObjectBracketNotation(){
@@ -174,22 +174,22 @@ function deleteObjectProperty(){
 }
 //While Loop
 function whileLoop(){
-var anArray = [];
-var i = 0;
-while(i < 5){
-anArray.push(i);
-i++;
-}
-document.getElementById('whileLoop').innerHTML = anArray;
+  var anArray = [];
+  var i = 0;
+  while(i < 5){
+    anArray.push(i);
+    i++;
+  }
+  document.getElementById('whileLoop').innerHTML = anArray;
 }
 
 function forLoop(){
-var anArray = [];
-for(var i = 0; i < 10; i++){
-anArray.push(i);
-}
-anArray.reverse();
-document.getElementById('forLoop').innerHTML = anArray;
+  var anArray = [];
+  for(var i = 0; i < 10; i++){
+    anArray.push(i);
+  }
+  anArray.reverse();
+  document.getElementById('forLoop').innerHTML = anArray;
 }
 
 //iterates through an array length
@@ -198,6 +198,6 @@ function iterateThroughArray(){
   total = 0;
   for(var i = 0; i < array.length; i++){
     total += array[i];
-}
-document.getElementById('arrayValuesIterate').innerHTML = array;
+  }
+  document.getElementById('arrayValuesIterate').innerHTML = array;
 }
