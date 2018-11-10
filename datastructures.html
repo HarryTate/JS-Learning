@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Javascript Objects</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload='loadArraysAndObjects()'>
+  <header>
+    <h1>Javascript Objects</h1>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div>First Name: <span id="firstName"></span></div>
+        <div>Last Name: <span id="lastName"></span></div>
+        <div>Age: <span id="age"></span></div>
+        <div>Grade: <span id="grade"></span></div>
+        <div>New Value: <span id="newValue"></span></div>
+      </div>
+      <div class="col-4">
+        <form id="form" onsubmit="return false;">
+          <input  type="text" id="userInput" />
+          <input type="submit" onclick="takeInput();" />
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <span>Push and unshift</span>
+        <div class="btn" id='pushUnshiftToArray'></div>
+      </div>
+      <div class="col-4">
+        <span>Pop and Shift</span>
+        <div class="btn" id='popShiftToArray'></div>
+      </div>
+      <div class="col-4">
+        <span>Splice Array</span>
+        <div class="btn" id='spliceArray'></div>
+      </div>
+      <div class="col-4">
+        <span>Slice Array</span>
+        <div class="btn" id='copiedSliceArray'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <span>Spread operator</span>
+          <div class="btn" id="spreadOperator">
+            Spread Operator
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/datastructures.js" charset="utf-8"></script>
+</body>
+
+</html>
