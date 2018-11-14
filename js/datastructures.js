@@ -73,3 +73,51 @@ document.getElementById('spreadOperator').addEventListener('click', () => {
   let array = [2,...character,'Str'];
   document.getElementById('spreadOperator').innerHTML = array;
 });
+document.getElementById('indexOf').addEventListener('click', () => {
+  //indexOf determine the position of an array element
+  let charIndex = character.indexOf('Minnie');
+  document.getElementById('indexOf').innerHTML = charIndex;
+});
+
+let nestedObject = {
+  cat: 12,
+  dog: 5,
+  personInfo: {
+    firstName: 'James',
+    lastName: 'Cooper',
+    age: 19,
+    Gender: 'Male'
+  },
+  turtle: 9,
+  points:15
+};
+
+
+document.getElementById('nestedObject').addEventListener('mouseover', () => {
+  //Access Nested objects in the dame method as accessing objects
+  let newObjectValue = nestedObject.personInfo.firstName = 'Phillip';
+  document.getElementById('nestedObject').innerHTML = newObjectValue;
+  //delete an object
+  delete nestedObject.dog;
+  //Create new object
+  nestedObject.giraffe = 9;
+});
+
+let checkIfKeyValuePresent = () => {
+  //Check if an object has key value
+  nestedObject.hasOwnProperty('cat','dog','turtle'); // Returns true
+  // Or
+  'dog' in nestedObject; // Returns true
+}
+
+document.getElementById('forInLoop').addEventListener('click', () => {
+   for(let x in nestedObject){
+     console.log(x);
+     var para = document.createElement("span");
+     var node = document.createTextNode(x + ' ');
+     para.appendChild(node);
+     var element = document.getElementById("forInLoop");
+     element.appendChild(para);
+   };
+
+});
