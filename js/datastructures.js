@@ -119,5 +119,8 @@ document.getElementById('forInLoop').addEventListener('click', () => {
      var element = document.getElementById("forInLoop");
      element.appendChild(para);
    };
-
 });
+
+document.getElementById('objectKeys').addEventListener('click', () => {
+    document.getElementById('objectKeys').innerHTML = Object.keys(nestedObject);
+})
