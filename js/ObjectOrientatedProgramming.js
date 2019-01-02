@@ -25,6 +25,6 @@ let terrier = new Dog('James', 'Blue');
 //Using instanceof allows you to check whether the object was created from the constructor
 terrier instanceof Dog; // Returns true
 
-//'prototype' allows all instances of an object to be created
+//'prototype' allows all instances of an object to be created with that object
 //Non prototypes will only be present in the ones they were created in
 Dog.prototype.species = 'dog';
