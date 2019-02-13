@@ -69,3 +69,30 @@ html, body{
   text-align:center;
   display: inline-block;
 }
+
+.colored-block{
+  padding: 10px;
+  width: 100px;
+  height:100px;
+  background-color: rgb(207, 170, 170);
+  display: inline-block;
+}
+
+.colored-block-red {
+  background-color: red;
+}
+.color-button {
+  padding: 10px 20px;
+  background-color: #bbb;
+  transition: .5s ease;
+  display: inline-block;
+}
+.color-button:focus, .color-button:active, .color-button:hover {
+  background-color: rgb(49, 8, 8);
+  color: #fff;
+  box-shadow: 1px 1px 1px #333;
+}
+
+#removeColor{
+  display: none;
+}
