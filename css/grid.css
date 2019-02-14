@@ -8,10 +8,12 @@
 .grid-item{
     width: 32%;
     height: 150px;
-    background-color: lightblue;
     display: inline-block;
     margin: 3px;
-    
+    background-color: rgba(135,101,219,1);
+}
+.grid-item:hover, .grid-item:focus, .grid-item:active{
+    background-color: rgba(135,101,219,.7);
 }
 
 @media (min-width: 768px) {
