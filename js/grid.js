@@ -1,14 +1,14 @@
-
+// Loads grid values randomly into grid
 ( function() { let listOfGridItems = document.getElementsByClassName('grid-item');
 for (let i = 0; i < listOfGridItems.length; i++) {
-    let animal;
+    let gridValue;
     let randNumber = Math.floor(Math.random() * listOfGridItems.length);
     if(randNumber > listOfGridItems.length / 2){
-        animal = 'Yellow';
+        gridValue = 'Yellow';
     } else {
-        animal = 'Blue';
+        gridValue = 'Blue';
     }
-    listOfGridItems[i].innerHTML = animal; 
+    listOfGridItems[i].innerHTML = gridValue; 
 } 
 })();
 
