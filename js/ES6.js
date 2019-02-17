@@ -45,5 +45,11 @@ var myConcat = function(arr1, arr2) {
 
 
 //Run these functions on load
-letKeyword();
-constKeyword();
+// letKeyword();
+// constKeyword();
+
+// Spread Opeator
+let spreadArray = ['Cat','Dog','Elephant', 'Mouse'];
+console.log(spreadArray);
+let newArray = ['Hamster', ...spreadArray ,'snake'];
+console.log(newArray);
