@@ -18,9 +18,6 @@ person = JSON.parse(person);
 // Returns value in a valid js object format
 // console.log(person);
 
-
-
-
 var xhttp = new XMLHttpRequest();
 
 xhttp.onreadystatechange = function () {
