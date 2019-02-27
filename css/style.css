@@ -5,6 +5,9 @@
 html, body{
   font-family: Arial, sans-serif;
 }
+a{
+  text-decoration: none;
+}
 
 .row::after {
     content: "";
@@ -94,5 +97,17 @@ html, body{
 }
 
 #removeColor{
+  display: none;
+}
+
+.button--blue{
+  padding: 20px 20px;
+  display: inline-block;
+  background-color: rgb(18, 84, 206);
+  border-radius:3px;
+  box-shadow: 1px 1px 1px rgb(105, 101, 101);
+  color: white;
+}
+.hidden{
   display: none;
 }
