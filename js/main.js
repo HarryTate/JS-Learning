@@ -40,8 +40,7 @@ function activateMatchNumber(){
 }
 // Block 7
 function chooseNumber(choice){
-  var user;
-  user = choice;
+  var user = choice;
   document.getElementById("printChoice").innerHTML = user ;
 }
 // Block 8

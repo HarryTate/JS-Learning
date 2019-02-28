@@ -1,8 +1,10 @@
+const quiz = (function(){
+// var globalModule = (function(){
 let questions = [
-    ['Question 1', ['ans 1','ans 2','ans 3','ans 4'],'ANS 4'],
-    ['Question 2', ['1','2','3','4ll'],'4LL'],
-    ['Question 3', ['1','2','3','4'],'4'],
-    ['Question 4', ['1','2','3','4'],'4']
+    ['Q', ['A1','A2','A3','A4'],'A4'],
+    ['Q', ['A1','A2','A3','A4'],'A4'],
+    ['Q', ['A1','A2','A3','A4'],'A4'],
+    ['Q', ['A1','A2','A3','A4'],'A4']
 ];
 
 let level = 0;
@@ -28,18 +30,27 @@ function startLevel(){
     document.getElementById("answer-3").innerHTML = questions[level][1][2];
     document.getElementById("answer-4").innerHTML = questions[level][1][3];
     document.getElementById("score").innerHTML = "Score: " + score;
-}
+};
 
-function submitAnswer(target){
-    //Get the answer from the input of the user
-    let userAnswer = event.target;
-    userAnswer = userAnswer.innerHTML;
-    userAnswer = userAnswer.toLowerCase();
-    checkAnswer(userAnswer);
+const answer = document.getElementsByClassName('answer');
+for (let i = 0; i < answer.length; i++) {
+    answer[i].addEventListener("click", function(target){
+        let userAnswer = event.target;
+        userAnswer = userAnswer.innerHTML;
+        userAnswer = userAnswer.toLowerCase();
+        checkAnswer(userAnswer);
+
+    }); 
 }
+// function submitAnswer(target){
+//     //Get the answer from the input of the user
+//     let userAnswer = event.target;
+//     userAnswer = userAnswer.innerHTML;
+//     userAnswer = userAnswer.toLowerCase();
+//     checkAnswer(userAnswer);
+// }
 
 function checkAnswer(userAnswer){
-    console.log(userAnswer);
     CurrentQuestionsAnswerToLower();
     let currentAnswer = questions[level][2];
     level++;
@@ -68,18 +79,23 @@ function loadNextLevel(){
     }
 }   
 function gameCompleted(){
-    console.log('Game completed');
     document.getElementById('quiz-answers').style.display = 'none'; 
     document.getElementById('question').innerHTML = 'Congratulations you scored: ' + score;
     // Hide current answers
-    // Change change question too 'Game Completed, you scored var score out of 10
-    
-    
+    // Change change question too 'Game Completed, you scored var score out of 10 
+    showRestartGUI();
 }
 
-function restartGame(){
-    
+function showRestartGUI(){
+    document.querySelector("#restartButton").classList.toggle("hidden");
 }
 
-
+document.querySelector("#restartButton").addEventListener("click", () => {
+    document.getElementById('quiz-answers').style.display = 'inline-block'; 
+    document.querySelector("#restartButton").classList.toggle("hidden");
+    level = 0;
+    score = 0;
+    startLevel();
+});
 startLevel();
+})();
