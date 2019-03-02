@@ -1,17 +1,16 @@
-const quiz = (function(){
-// var globalModule = (function(){
+(function(){
 let questions = [
-    ['Q', ['A1','A2','A3','A4'],'A4'],
-    ['Q', ['A1','A2','A3','A4'],'A4'],
-    ['Q', ['A1','A2','A3','A4'],'A4'],
-    ['Q', ['A1','A2','A3','A4'],'A4']
+    ['Q1', ['A1','A2','A3','A4'],'A4'],
+    ['Q2', ['A1','A2','A3','A4'],'A4'],
+    ['Q3', ['A1','A2','A3','A4'],'A4'],
+    ['Q4', ['A1','A2','A3','A4'],'A4']
 ];
-
+let timeLeft = 11;
 let level = 0;
 let score = 0;
 
 //Converts questions and answer of current question all to lowercase
-function CurrentQuestionsAnswerToLower(){
+function currentQuestionsAnswerToLower(){
     for(let i = 0; i <= questions[0].length; i++){
         let stringQuestions = questions[level][1][i];
         stringQuestions = stringQuestions.toLowerCase();
@@ -22,8 +21,8 @@ function CurrentQuestionsAnswerToLower(){
     questions[level][2] = stringAnswer;
 }
 
-
-function startLevel(){
+function startLevel(){   
+    document.querySelector('#timer').style.display = 'inline-block';
     document.getElementById("question").innerHTML = questions[level][0]; 
     document.getElementById("answer-1").innerHTML = questions[level][1][0];
     document.getElementById("answer-2").innerHTML = questions[level][1][1];
@@ -39,26 +38,20 @@ for (let i = 0; i < answer.length; i++) {
         userAnswer = userAnswer.innerHTML;
         userAnswer = userAnswer.toLowerCase();
         checkAnswer(userAnswer);
-
     }); 
 }
-// function submitAnswer(target){
-//     //Get the answer from the input of the user
-//     let userAnswer = event.target;
-//     userAnswer = userAnswer.innerHTML;
-//     userAnswer = userAnswer.toLowerCase();
-//     checkAnswer(userAnswer);
-// }
 
 function checkAnswer(userAnswer){
-    CurrentQuestionsAnswerToLower();
+    currentQuestionsAnswerToLower();
     let currentAnswer = questions[level][2];
     level++;
     if(userAnswer === currentAnswer){
         increaseScore();
+        timeLeft = 11;
         loadNextLevel();
         //Go to next Level and increase score
     } else {
+        timeLeft = 11;
         loadNextLevel();
         //Go to next level and do not increase score
     }
@@ -88,14 +81,34 @@ function gameCompleted(){
 
 function showRestartGUI(){
     document.querySelector("#restartButton").classList.toggle("hidden");
+    document.querySelector('#timer').style.display = 'none';
 }
 
 document.querySelector("#restartButton").addEventListener("click", () => {
+    timeLeft = 11;
     document.getElementById('quiz-answers').style.display = 'inline-block'; 
     document.querySelector("#restartButton").classList.toggle("hidden");
     level = 0;
     score = 0;
+    
     startLevel();
 });
+function timer(){ 
+    setInterval(function(){
+        timeLeft--;
+        document.querySelector('#timer').innerHTML = timeLeft;
+        if(timeLeft === 0){
+        clearTimeout(timeLeft);
+        checkAnswer();
+        timeLeft = 11;
+        }
+    }, 1000);
+}
+
+timer();
 startLevel();
 })();
+
+
+
+
