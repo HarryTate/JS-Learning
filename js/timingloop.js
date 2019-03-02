@@ -32,4 +32,18 @@ document.getElementById('removeColor').addEventListener('click', () => {
 });
 
 
+var timeLeft = 11;
+
+setInterval(function(){
+     timeLeft = timeLeft - 1;
+     document.querySelector('#timer').innerHTML = timeLeft;
+     console.log(timeLeft);
+     if(timeLeft == 0){
+        clearTimeout(timeLeft);
+        timeLeft = 11;
+
+        //Go to next Question
+     }
+    }, 1000);
+
    
