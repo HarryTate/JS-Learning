@@ -28,3 +28,39 @@ terrier instanceof Dog; // Returns true
 //'prototype' allows all instances of an object to be created with that object
 //Non prototypes will only be present in the ones they were created in
 Dog.prototype.species = 'dog';
+
+
+const people = {
+   peopleList: [],
+  init: function(){
+      this.cacheDom();
+      this.bindEvents();
+  },
+  cacheDom: function(){
+      //Cache Dom Elements
+      this.inputBox = document.getElementById('inputBox');
+      this.addButton = document.getElementById('addName');
+      this.namesList = document.getElementById('names');
+  },
+  bindEvents: function(){
+    // Bind Events to event listeners
+    this.addButton.addEventListener('click', this.addPerson.bind(this));
+  },
+  render: function() {
+    //Render data
+    this.namesList.innerHTML = '';
+    for(i = 0; i < this.peopleList.length; i++){
+     this.namesList.innerHTML += '<li>' + this.peopleList[i] + '</li>';
+  }
+  },
+  addPerson: function(){
+   let userInput = this.inputBox.value;
+    this.peopleList.push(userInput);
+    this.render();
+  },
+  deletePerson: function(){
+
+  }
+}
+
+people.init();
