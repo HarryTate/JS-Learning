@@ -48,15 +48,17 @@ const people = {
   },
   render: function() {
     //Render data
-    this.namesList.innerHTML = '';
-    for(i = 0; i < this.peopleList.length; i++){
-     this.namesList.innerHTML += '<li>' + this.peopleList[i] + '</li>';
-  }
+   
   },
   addPerson: function(){
    let userInput = this.inputBox.value;
     this.peopleList.push(userInput);
     this.render();
+    this.namesList.innerHTML = '';
+    for(i = 0; i < this.peopleList.length; i++){
+     this.namesList.innerHTML += '<li>' + this.peopleList[i] + '</li>';
+  }
+    this.inputBox.value = '';
   },
   deletePerson: function(){
 

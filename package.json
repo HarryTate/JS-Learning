@@ -1,0 +1,27 @@
+{
+  "name": "js-learning",
+  "version": "1.0.0",
+  "description": "An area for learning and practising javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel js -d compiledjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarryTate/JS-Learning.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Harry Tate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarryTate/JS-Learning/issues"
+  },
+  "homepage": "https://github.com/HarryTate/JS-Learning#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
