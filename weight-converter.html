@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/weight-converter.css">
+    <title>Weight converter</title>
+</head>
+<body>
+    <header class="header"></header>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="converter">
+                    <h1 class="converter__title">Weight Converter</h1>
+                    <div class="converter__btn-group">
+                        <p class="converter__sub-text">Convert from</p>
+                        <span id="fromKg" class="btn fromWeightSelect">Kg</span>
+                        <span id="fromLbs" class="btn fromWeightSelect">lbs</span>
+                        <span id="fromGrams" class="btn fromWeightSelect">grams</span>
+                        <span id="fromOunces" class="btn fromWeightSelect">ounces</span>
+                    </div>
+                    <div class="converter__btn-group">
+                            <p class="converter__sub-text">Convert to</p>
+                            <span id="toKg" class="btn">Kg</span>
+                            <span id="toLbs" class="btn">lbs</span>
+                            <span id="toGrams" class="btn">grams</span>
+                            <span id="toOunces" class="btn">ounces</span>    
+                        </div>
+                    <input id="weightInput" class="converter__input-field" type="text">
+                    <button id="convertBtn" class="btn btn--red mt-1">Convert</button>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <script src="js/weight-converter.js"></script>
+</body>
+</html>
