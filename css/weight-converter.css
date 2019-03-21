@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.mt-1 {
+    margin-top: 1em;
+}
+.header {
+    width: 100%;
+    background-color: lightblue;
+    height: 50px;
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.converter {
+   padding: 15px;
+}
+.converter__title {
+ font-size: 1.4em;
+}
+.converter__sub-text {
+    margin-top: 1rem;
+}
+.converter__btn-group {
+   display: inline-block;
+}
+.converter__input-field {
+    display: block;
+    margin: 1em 0 .5em;
+}
+.btn{
+    color: white;
+    padding: 10px 15px;
+    background-color: #2964e2;
+    box-shadow: 1px 1px 1px #111;
+}
+.btn:hover, .btn:focus, .btn:active {
+   color: #FFF;
+}
+.btn--red {
+    background-color: rgb(202, 60, 60);
+}
+
