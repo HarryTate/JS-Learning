@@ -7,7 +7,7 @@ function append(parent, el){
 }
 
 const ul = document.getElementById("authors");
-fetch('https://randomuser.me/api?results=10')
+fetch('https://randomuser.me/api?results=11')
 .then((resp) => resp.json())
 .then(function (data){
     let authors = data.results;
@@ -26,5 +26,5 @@ fetch('https://randomuser.me/api?results=10')
 })
 
 .catch( function(error){
-    console.log(JSON.stringify(error));
+    console.log(error);
 });
