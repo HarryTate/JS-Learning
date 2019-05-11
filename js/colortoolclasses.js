@@ -34,7 +34,7 @@ class ColorsTool {
     return this.colors;
   }
   addColor(name, hex) {
-    var newColor = {
+    let newColor = {
       name: name,
       hex: hex
     };
@@ -44,14 +44,33 @@ class ColorsTool {
     this.colors.splice(el, 1);
   }
 }
-var first = new ColorsTool();
+let first = new ColorsTool();
 document.getElementById("refresh").addEventListener("click", () => {
   first.renderColors();
 });
 document.getElementById("remove").addEventListener("click", () => {
   let numberToRemove = document.getElementById("removeNumber").value;
-  numberToRemove = numberToRemove - 1;
-  first.removeColor(numberToRemove);
+
+  console.log(first.colors.length);
+  if (numberToRemove && numberToRemove < first.colors.length + 1) {
+    numberToRemove = numberToRemove - 1;
+    first.removeColor(numberToRemove);
+  } else {
+    alert("Item does not exist or no value entered");
+  }
   first.renderColors();
 });
+document.getElementById("add").addEventListener("click", () => {
+  let nameToAdd = document.getElementById("addName").value;
+  let hexToAdd = document.getElementById("addHex").value;
+  //TODO Check if color already exists
+  //Check if values have fields
+  if (nameToAdd || hexToAdd) {
+    first.addColor(nameToAdd, hexToAdd);
+  } else {
+    alert("Fields Require Values");
+  }
+  first.renderColors();
+});
+
 first.renderColors();
