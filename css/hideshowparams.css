@@ -1,0 +1,7 @@
+.block1 , .block2, .default {
+    display: none;
+}
+
+.show {
+    display: block;
+}
