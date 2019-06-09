@@ -8,7 +8,6 @@
     "babel": "babel js -d compiledjs",
     "browserify": "browserify ./js/browserify.js -o ./js/bundle.js",
     "watchify": "watchify ./js/browserify.js -o ./js/bundle.js"
-
   },
   "repository": {
     "type": "git",
