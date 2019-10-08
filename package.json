@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel js -d compiledjs",
     "browserify": "browserify ./js/browserify.js -o ./js/bundle.js",
-    "watchify": "watchify ./js/browserify.js -o ./js/bundle.js"
+    "watchify": "watchify ./js/browserify.js -o ./js/bundle.js",
+    "start": "node ./express/index.js",
+    "dev": "nodemon ./express/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,10 +28,13 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "browserify": "^16.2.3",
+    "nodemon": "^1.19.3",
     "watchify": "^3.11.1"
   },
   "dependencies": {
     "braces": "^3.0.2",
-    "jquery": "^3.4.0"
+    "express": "^4.17.1",
+    "jquery": "^3.4.0",
+    "moment": "^2.24.0"
   }
 }
