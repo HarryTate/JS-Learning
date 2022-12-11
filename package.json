@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "braces": "^3.0.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jquery": "^3.4.0",
     "moment": "^2.24.0"
   }
